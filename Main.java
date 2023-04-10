@@ -21,8 +21,10 @@ class Main {
           System.out.println("Podaj imie studenta:");
           String name = scan.nextLine();
           System.out.println("Podaj wiek studenta:");
-          int age = scan.nextInt();
-          s.addStudent(new Student(name, age));          
+          int age = scan.nextInt();scan.nextLine();
+          System.out.println("Podaj date urodzenia w formie (DD.MM.RRRR):");
+          String date = scan.nextLine();
+          s.addStudent(new Student(name, age, date));          
         }
         else if(input.equals("wypisz")){
           var students = s.getStudents();
